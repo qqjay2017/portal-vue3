@@ -6,4 +6,7 @@ export default antfu({
   ignores: [
     'vite.config.ts',
   ],
+  rules: {
+    'no-console': 'warn',
+  },
 })

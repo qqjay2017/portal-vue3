@@ -1,0 +1,216 @@
+.result-success-wrap {
+    .px2rem(padding-top, 151);
+    text-align: center;
+    position: relative;
+    height: 100%;
+    &.type-fail {
+        .px2rem(padding-top, 264);
+        .succ-img-cont {
+            .img-icon {
+                .px2rem(width, 38);
+                .px2rem(height, 36);
+            }
+        }
+        .succ-result-text {
+            color: #E86E2C;
+        }
+    }
+    &.has-btn {
+        .px2rem(padding-top, 84);
+        
+        .btn-appointment {
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            .px2rem(bottom, 64);
+            .px2rem(width, 554);
+            .px2rem(height, 92);
+            .px2rem(line-height, 92);
+            background: #3B71E8;
+            color: #FFFFFF;
+            font-weight: bold;
+            .px2px(font-size, 32);
+            .px2rem(border-radius, 10);
+        }
+    }
+    .succ-img-cont {
+        position: relative;
+        .px2rem(width, 128);
+        .px2rem(height, 121);
+        margin: 0 auto;
+        .img-wrap {
+            .px2rem(width, 98);
+            .px2rem(height, 108);
+            position: absolute;
+            left: 50%;
+            .px2rem(bottom, 13);
+            transform: translateX(-50%);
+        }
+        .img-icon {
+            .px2rem(width, 43);
+            .px2rem(height, 33);
+            position: absolute;
+            left: 50%;
+            .px2rem(top, 28);
+            transform: translateX(-50%);
+        }
+        .img-bottom {
+            .px2rem(width, 128);
+            .px2rem(height, 63);
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        .img-print {
+            width: 160px;
+            height: 138px;
+        }
+    }
+
+    .succ-result-text {
+        .px2rem(padding-top, 38);
+        color: #3B71E8;
+        font-weight: bold;
+        .px2px(font-size, 39);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+            .px2px(font-size, 34);
+        }
+    }
+    .succ-num-text {
+        .px2rem(padding-top, 47);
+        color: #333333;
+        font-weight: bold;
+        .px2px(font-size, 75);
+        span {
+            .px2px(font-size, 62);
+        }
+    }
+    .tips-account {
+        color: #999999;
+        .px2px(font-size, 26);
+        &.appointment {
+          .px2rem(padding-top, 28);
+        }
+    }
+
+    .fee-list-cont {
+        .px2rem(padding-top, 68);
+        .px2rem(padding-left, 113);
+        .px2rem(padding-right, 113);
+        .fee-list {
+            border-top: 2px solid #F5F5F5;
+            .px2rem(padding-top, 56);
+            .px2px(font-size, 32);
+            .item-fee {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .px2rem(padding-bottom, 56);
+                .left-name {
+                    color: #999999;
+                }
+                .right-num {
+                    color: #666666;
+                    font-weight: bold;
+                    &.col-bule {
+                        color: #3B71E8;
+                    }
+                }
+            }
+        }
+    }
+
+    .text-tips {
+        color: #666666;
+        .px2px(font-size, 32);
+        .px2rem(padding-top, 28);
+    }
+
+    .tips-insured-cont {
+        background: #F8F9FA;
+        position: fixed;
+        .px2rem(left, 50);
+        .px2rem(right, 50);
+        .px2rem(bottom, 220);
+        color: #666666;
+        .px2px(font-size, 30);
+        text-align: left;
+        .px2rem(padding, 40);
+        .tips-text {
+            .px2rem(padding-bottom, 20);
+            &:last-child {
+                padding-bottom: 0;
+            }
+            .col-blue {
+                color: #3B71E8;
+                display: inline-block;
+            }
+        }
+    }
+
+    .bottom-btn {
+        background: #FFFFFF;
+        border-radius: 9px;
+        border: 2px solid #3B71E8;
+        font-size: 39px;
+        font-weight: 500;
+        color: #3B71E8;
+        padding: 18px 0;
+    }
+    .back-home {
+        position: fixed;
+        width: 100%;
+        bottom: 75px;
+        font-weight: 500;
+        margin-left: -113px;
+        font-size: 34px;
+        color: #3B71E8;
+    }
+
+    .btn-list-cont {
+        position: fixed;
+        left: 75px;
+        right: 75px;
+        bottom: 37px;
+        .btn-cont {
+            font-size: 34px;
+            color: #3B71E8;
+            margin-bottom: 38px;
+            &.primary {
+                background: #FFFFFF;
+                border-radius: 9px;
+                border: 2px solid #3B71E8;
+                font-size: 39px;
+                font-weight: 500;
+                color: #3B71E8;
+                padding: 18px 0;
+            }
+        }
+    }
+    .result-success-banner {
+        position: absolute;
+        width: 100%;
+        height: 234px;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        background-image: url("../../../assets/images/credit/appointment-succ-banner.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        &-logo {
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            border-radius: 11px;
+            overflow: hidden;
+            position: absolute;
+            top: 32px;
+            right: 28px;
+        }
+    }
+}

@@ -1,0 +1,109 @@
+.home-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    .agreement-tips {
+        position: absolute;
+        .px2rem(bottom, 19);
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        text-align: center;
+        color: #fff;
+        .px2px(font-size, 22);
+    }
+    .btn-cont-wrap {
+        position: absolute;
+        .px2rem(bottom, -350);
+        background: #fff;
+        width: 100%;
+        .px2rem(height, 300);
+        transition: bottom 0.25s ease;
+        .btn-cont {
+            // .px2rem(padding-top, 40);
+            text-align: center;
+            // .focus{ position: relative;}
+            &:after { 
+                content: ""; 
+                position: absolute; 
+                left: 50%;
+                transform: translateX(-50%);
+                .px2rem(top, -50);
+                z-index: 1;
+                .px2rem(height, 100);
+                width: 120%; 
+                border-radius: 50%; 
+                background:#fff;
+            }
+            .btn-face {
+                position: relative;
+                z-index: 2;
+                .px2px(font-size, 34);
+                .px2rem(width, 480);
+                .px2rem(height, 86);
+                span {
+                    position: relative;
+                    .px2rem(padding-left, 55);
+                    .px2rem(padding-top, 8);
+                    &::before {
+                        content: '';
+                        .px2rem(width, 34);
+                        .px2rem(height, 34);
+                        background: url('../../images/icon_face.png') 0 0 no-repeat;
+                        background-size: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                    &.type-printer {
+                        &::before {
+                            content: '';
+                            .px2rem(width, 34);
+                            .px2rem(height, 34);
+                            background: url('../../images/icon_printer.png') 0 0 no-repeat;
+                            background-size: 100%;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        } 
+                    }
+                }
+            }
+            .btn-cert {
+                .px2rem(width, 480);
+                .px2rem(height, 86);
+                .px2rem(margin-top, 20);
+                background: #fff;
+                color: #3B71E8;
+                .px2px(font-size, 34);
+                font-weight: bold;
+            }
+
+            .agreement-tips {
+                position: absolute;
+                .px2rem(bottom, 39);
+                width: 100%;
+                text-align: center;
+                color: #999999;
+                .px2px(font-size, 22);
+                .px2rem(margin-top, 30);
+                p {
+                    display: inline-block;
+                    &.col-blue  {
+                        // .px2rem(padding-left, 20);
+                        color: #3B71E8;
+                    }
+                }
+            }
+        }
+        &.active {
+            bottom: 0;
+        }
+    }
+}

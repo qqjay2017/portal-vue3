@@ -1,12 +1,26 @@
 <script lang="ts" setup name="Demo">
+const columns = [
+  { text: '杭州', value: 'Hangzhou' },
+  { text: '宁波', value: 'Ningbo' },
+  { text: '温州', value: 'Wenzhou' },
+  { text: '绍兴', value: 'Shaoxing' },
+  { text: '湖州', value: 'Huzhou' },
+]
+
+const showPicker = ref(false)
 const contentList = reactive([
   '✔ ⚡ Vue3 + Vite5',
 ])
 
 function handleClick() {
+  showPicker.value = true
   showToast({
     message: '点击了',
   })
+}
+
+function onConfirm(value: any) {
+  console.log(value)
 }
 </script>
 
@@ -31,4 +45,11 @@ function handleClick() {
       <van-cell v-for="(item, idx) in contentList" :key="idx" :title="item" />
     </div>
   </div>
+  <van-popup v-model:show="showPicker" round position="bottom">
+    <van-picker
+      :columns="columns"
+      @cancel="showPicker = false"
+      @confirm="onConfirm"
+    />
+  </van-popup>
 </template>

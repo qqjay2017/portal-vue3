@@ -1,0 +1,191 @@
+.card-list-wrap {
+    .px2rem(padding-bottom, 25);
+    .card-list-cont {
+        .px2rem(padding-left, 50);
+        .px2rem(padding-right, 50);
+        .px2rem(padding-bottom, 25);
+        &.has-pad-top {
+            .px2rem(padding-top, 20);
+        }
+        .card-cont-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .px2rem(padding-left, 16);
+            .px2rem(padding-right, 16);
+            .px2rem(padding-top, 10);
+            .card-title {
+                color: #222222;
+                .px2px(font-size, 34);
+                font-weight: bold;
+            }
+            .card-choose {
+                color: #666666;
+                .px2px(font-size, 30);
+                position: relative;
+                .px2rem(padding-right, 37);
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    .px2rem(width, 17);
+                    .px2rem(height, 28);
+                    background: url('../../images/icon_arrow_right_gray.png') 0 0 no-repeat;
+                    background-size: 100%;
+                }
+            }
+        }
+
+        .item-card {
+            .px2rem(margin-top, 25);
+            position: relative;
+            .bg-card {
+                .px2rem(width, 618);
+                .px2rem(height, 334);
+                position: absolute;
+                .px2rem(left, 16);
+                .px2rem(top, 16);
+            }
+            .card-cont {
+                background: #F9FBFF;
+                border: 2px solid #EFF0F2;
+                .px2rem(border-radius, 33);
+                .px2rem(width, 650);
+                .px2rem(height, 366);
+                .px2rem(padding, 16);
+                box-sizing: border-box;
+                // position: relative;
+                .balance-num {
+                    position: absolute;
+                    .px2rem(left, 450);
+                    .px2rem(top, 70);
+                    color: #fff;
+                    .px2px(font-size, 28);
+                    font-weight: bold;
+                }
+                .inpatient-cont {
+                    position: absolute;
+                    .px2rem(right, 60);
+                    .px2rem(top, 70);
+                    text-align: right;
+                    .inpatient-state {
+                        color: #FFFFFF;
+                        .px2px(font-size, 30);
+                        font-weight: bold;
+                    }
+                    .inpatient-num {
+                        color: #fff;
+                        .px2px(font-size, 22);
+                        .px2rem(padding-top, 5);
+                    }
+                }
+                .ec-title {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    z-index: 2;
+                    .px2rem(padding-top, 50);
+                    .px2rem(padding-left, 40);
+                    .ec-logo {
+                        .px2rem(width, 68);
+                        .px2rem(height, 68);
+                    }
+                    .ec-info {
+                        .px2rem(padding-left, 18);
+                        .ec-name {
+                            .px2px(font-size, 34);
+                            color: #fff;
+                            font-weight: bold;
+                        }
+                        .ec-maker {
+                            .px2px(font-size, 22);
+                            color: #fff;
+                        }
+                    }
+                }
+                .ec-user-content {
+                    position: relative;
+                    z-index: 2;
+                    .px2rem(padding-top, 50);
+                    .px2rem(padding-left, 40);
+                    .px2rem(padding-right, 40);
+                    .user-name {
+                        color: #fff;
+                        font-weight: bold;
+                        .px2px(font-size, 34);
+                        display: flex;
+                        align-items: center;
+                        .patient-state {
+                            display: inline-block;
+                            .px2px(font-size, 24);
+                            .px2rem(margin-left, 10);
+                            border: 1px solid #fff;
+                            .px2rem(padding-left, 8);
+                            .px2rem(padding-right, 8);
+                            font-weight: normal;
+                            .px2rem(line-height, 34);
+                        }
+                    }
+                    .ec-user {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .user-id {
+                            color: #fff;
+                            font-weight: bold;
+                            .px2px(font-size, 32);
+                        }
+                        .right-cont {
+                            .print-btn {
+                                text-align: center;
+                                color: #3B71E8;
+                                .px2px(font-size, 26);
+                                font-weight: bold;
+                                .px2rem(width, 172);
+                                .px2rem(height, 64);
+                                .px2rem(line-height, 68);
+                                background: #fff;
+                                .px2rem(border-radius, 32);
+                                &.col-green {
+                                    color: #75900F;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .qrcode-cont {
+        text-align: center;
+        background: #FAFCFF;
+        border: 1px solid #E9F2FF;
+        .px2rem(border-radius, 30);
+        .px2rem(padding-top, 50);
+        .px2rem(padding-bottom, 50);
+        .px2rem(margin-left, 50);
+        .px2rem(margin-right, 50);
+        .qrcode-title {
+            color: #424856;
+            font-weight: bold;
+            .px2rem(padding-bottom, 20);
+        }
+        .qrcode-content {
+            .px2rem(width, 330);
+            .px2rem(height, 330);
+            .px2rem(padding, 15);
+            margin: 0 auto;
+            .px2rem(margin-top, 26);
+            box-sizing: border-box;
+            border: 1px solid #E6EBF0;
+            box-shadow: 0px 0px 19px 0px rgba(212,221,228,0.6);
+            .img-qrcode {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,194 @@
+.home-self-inpatient-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+
+    .menu-cont-wrap {
+        position: absolute;
+        bottom: 0;
+        background: #fff;
+        width: 100%;
+        .px2rem(height, 400);
+        z-index: 2;
+        .menu-cont {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .px2rem(padding-left, 40);
+            .px2rem(padding-right, 40);
+            .px2rem(padding-top, 13);
+            &::after { 
+                content: ""; 
+                position: absolute; 
+                left: 50%;
+                transform: translateX(-50%);
+                .px2rem(top, -30);
+                z-index: 1;
+                .px2rem(height, 225);
+                width: 180%; 
+                border-radius: 50%; 
+                background: #fff;
+            }
+            // 只有一个按钮时
+            .only-one-big {
+                margin: 0 auto;
+                margin-top: 78px;
+                .item-menu {
+                    position: relative;
+                    z-index: 2;
+                    width: 600px;
+                    height: 169px;
+                    background: #3D6EDA;
+                    border-radius: 15px;
+                    position: relative;
+                    padding-top: 60px;
+                    padding-left: 53px;
+                    // text-align: center;
+                    .menu-title {
+                        font-size: 32px;
+                        color: #fff;
+                        font-weight: bold;
+                    }
+                    .menu-bg-icon {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        right: 40px;
+                        width: 122px;
+                        height: 122px;
+                    }
+                }
+            }
+
+            // 两列有一个按钮时
+            .only-one-cont {
+                &.columns_0 {
+                    .item-menu {
+                        background: #30C6C2;
+                    }
+                }
+                &.columns_1 {
+                    .item-menu {
+                        background: #3D6EDA;
+                    }
+                }
+                .item-menu {
+                    position: relative;
+                    z-index: 2;
+                    width: 320px;
+                    height: 285px;
+                    background: #30C6C2;
+                    border-radius: 15px;
+                    position: relative;
+                    padding-top: 193px;
+                    text-align: center;
+                    .menu-title {
+                        font-size: 32px;
+                        color: #fff;
+                        font-weight: bold;
+                    }
+                    .menu-bg-icon {
+                        position: absolute;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: 53px;
+                        width: 122px;
+                        height: 122px;
+                    }
+                }
+            }
+
+            // 两列有两个按钮时
+            .only-two-cont {
+                // flex: 0;
+                // text-align: right;
+                // .px2rem(width, 320);
+                .px2rem(height, 285);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                &.columns_0 {
+                    .item-menu {
+                        background: #30C6C2;
+                        &:last-child {
+                            background: #FCCA0A;
+                        }
+                    }
+                }
+                &.columns_1 {
+                    &.type-more {
+                        .item-menu {
+                            background: #3D6EDA;
+                            &:last-child {
+                                background: #30C6C2;
+                            }
+                        }
+                    }
+                    .item-menu {
+                        background: #FCCA0A;
+                        &:last-child {
+                            background: #3D6EDA;
+                        }
+                    }
+                }
+                .item-menu {
+                    position: relative;
+                    z-index: 2;
+                    width: 320px;
+                    height: 131px;
+                    background: #FCCA0A;
+                    border-radius: 15px;
+                    display: flex;
+                    align-items: center;
+                    // padding-top: 43px;
+                    padding-left: 34px;
+                    padding-right: 120px;
+                    .menu-bg-icon {
+                        position: absolute;
+                        bottom: -10px;
+                        right: -15px;
+                        width: 106px;
+                        height: 106px;
+                    }
+                    .menu-title {
+                        font-size: 30px;
+                        color: #fff;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        .agreement-tips {
+            position: absolute;
+            .px2rem(bottom, 30);
+            width: 100%;
+            text-align: center;
+            color: #999999;
+            .px2px(font-size, 23);
+            // .px2rem(margin-top, 30);
+            p {
+                display: inline-block;
+                &.col-blue  {
+                    // .px2rem(padding-left, 20);
+                    color: #3B71E8;
+                }
+            }
+        }
+    }
+
+    .agreement-tips {
+        position: absolute;
+        .px2rem(bottom, 19);
+        display: inline-block;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        text-align: center;
+        color: #fff;
+        .px2px(font-size, 22);
+    }
+}

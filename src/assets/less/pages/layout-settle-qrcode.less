@@ -1,0 +1,142 @@
+.settle-qrcode-wrap {
+    text-align: center;
+    height: 100%;
+    background: #FAFCFF;
+
+    &.type-self {
+        .cost-content {
+            .cost-pay-title {
+                margin-top: 70px;
+            }
+            .common-terminal-cont {
+                top: 80px;
+            }
+        }
+        .pay-tips {
+            position: absolute;
+            .px2rem(bottom, 40);
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            color: #333333;
+            .px2px(font-size, 34);
+            .text-strong {
+                font-weight: bold;
+            }
+            .icon-wx {
+                .px2rem(width, 39);
+                .px2rem(height, 39);
+                .px2rem(margin-left, 24);
+                .px2rem(margin-right, 10);
+            }
+        }
+    }
+    .bg-cost-cont {
+        width: 100%;
+        height: 488px;
+        background: #3B71E8;
+        border-radius: 0px 0px 56px 56px; 
+        text-align: center;
+        padding-top: 113px;
+        .cost-num {
+            font-size: 69px;
+            font-weight: bold;
+            color: #fff;
+            // line-height: 1;
+            position: relative;
+            display: inline-block;
+            padding-left: 55px;
+            &::before {
+                content: '￥';
+                color: #fff;
+                font-weight: bold;
+                font-size: 52px;
+                position: absolute;
+                left: 0;
+                top: 53%;
+                transform: translateY(-50%);
+            }
+        }
+        .cost-text {
+            font-size: 36px;
+            color: #fff;
+        }
+    }
+    .cost-content {
+        margin: -173px 38px 0;
+        background: #FFFFFF;
+        border-radius: 45px;
+        border: 1px solid #E6E6E6;
+        height: 707px;
+        padding: 0 38px;
+        position: relative;
+        text-align: center;
+
+        .cost-pay-title {
+            color: #333333;
+            font-size: 34px;
+            margin-top: 94px;
+            position: relative;
+            display: inline-block;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -52px;
+                width: 33px;
+                height: 13px;
+                background: url('../../images/icon-title.png') 0 0 no-repeat;
+                background-size: 100%;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) rotate(180deg);
+                right: -52px;
+                width: 33px;
+                height: 13px;
+                background: url('../../images/icon-title.png') 0 0 no-repeat;
+                background-size: 100%;
+            }
+        }
+        .common-terminal-cont {
+            position: absolute;
+            left: -40px;
+            top: 130px;
+            margin-top: 0;
+            overflow: hidden;
+            transform: scale(0.8);
+        }
+    }
+
+    .btn-face-pay {
+        margin-top: 49px;
+        text-align: center;
+        font-size: 36px;
+        color: #3B71E8;
+        position: relative;
+        display: inline-block;
+        padding-right: 32px;
+        &.type-fixed {
+            position: fixed;
+            z-index: 5;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 55px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background: url('../../images/icon_arrow_rihgt_blue.png') 0 0 no-repeat;
+            background-size: 100%;
+        }
+    }
+}

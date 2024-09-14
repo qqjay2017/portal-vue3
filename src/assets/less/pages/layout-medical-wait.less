@@ -1,0 +1,109 @@
+.medical-wait-wrap {
+    // .px2rem(padding-top, 56);
+    // .px2rem(padding-top, 174);
+    text-align: center;
+    .img-logo {
+        .px2rem(width, 169);
+        .px2rem(height, 90);
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        .px2rem(top, 150);
+    }
+    .img-wait {
+        width: 100%;
+        .px2rem(height, 713);
+    }
+
+    // .tips {
+    //     color: #3B71E8;
+    //     font-weight: bold;
+    //     .px2px(font-size, 39);
+    //     .px2rem(padding-top, 127);
+    //     .dot {
+    //         display: inline-block;
+    //         overflow: hidden;
+    //         height: 1em;
+    //         line-height: 1;
+    //         vertical-align: -.25em;
+    //         text-align: left;
+    //         &::after {
+    //             display: block;
+    //             white-space: pre-wrap;
+    //             content: "...\A..\A.";
+    //             animation: loading 3s infinite step-start both;
+    //         }
+    //     }
+    // }
+
+    .wait-content-cont {
+        .px2rem(padding-left, 94);
+        .px2rem(padding-right, 94);
+        &.empty-info {
+            .content-title {
+                .px2rem(padding-top, 140);
+            }
+        }
+
+        &.has-btn {
+            .content-title {
+                .px2px(font-size, 48);
+                .px2rem(padding-top, 56);
+                .px2rem(padding-bottom, 48);
+            }
+        }
+        .content-title {
+            color: #3B71E8;
+            font-weight: bold;
+            .px2px(font-size, 49);
+            .px2rem(padding-top, 84);
+            .px2rem(padding-bottom, 75);
+            .dot {
+                display: inline-block;
+                overflow: hidden;
+                height: 1em;
+                line-height: 1;
+                vertical-align: -.25em;
+                text-align: left;
+                &::after {
+                    display: block;
+                    white-space: pre-wrap;
+                    content: "...\A..\A.";
+                    animation: loading 1.5s infinite step-start both;
+                }
+            }
+        }
+        .user-contnet {
+            .item-user {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: #999999;
+                .px2px(font-size, 32);
+                .px2rem(padding-bottom, 38);
+                .left-title {
+                    color: #999999;
+                }
+                .right-content {
+                    color: #666666;
+                    font-weight: bold;
+                }
+            }
+
+            .btn-charge {
+                .px2rem(height, 92);
+                .px2rem(line-height, 92);
+                background: #3B71E8;
+                color: #FFFFFF;
+                font-weight: bold;
+                .px2px(font-size, 32);
+                .px2rem(border-radius, 10);
+                .px2rem(margin-top, 15);
+            }
+        }
+    }
+}
+@keyframes loading {
+    33% { transform: translateY(-2em); }
+    66% { transform: translateY(-1em); }
+}

@@ -60,6 +60,11 @@ export default defineConfig(({ mode }) => {
               'showConfirmDialog'
             ]
           },
+          {
+            '@/hooks': [
+              'useBackHome',
+            ]
+          },
         ],
         eslintrc: { enabled: true, globalsPropValue: 'readonly' }
       }),

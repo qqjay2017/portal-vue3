@@ -1,0 +1,108 @@
+.verify-result-wrap {
+    text-align: center;
+    .px2rem(padding-top, 208);
+    &.has-btn {
+        .px2rem(padding-top, 93);
+    }
+    &.type-fail {
+        .text-content {
+            .text-result {
+                color: #E86E2C;
+            }
+        }
+        .back-time-cont {
+            color: #E86E2C;
+        }
+        .fail-btn-container {
+          .px2rem(margin-top, 187);
+          .px2rem(padding-left, 168);
+          .px2rem(padding-right, 168);
+          .btn {
+            text-align: center;
+            .px2px(font-size, 32);
+            font-weight: 500;
+            color: #3B71E8;
+            .px2rem(height, 92);
+            .px2rem(line-height, 92);
+            .px2rem(border-radius, 10);
+            border:2px solid #3B71E8;
+            .px2rem(border-width, 2);
+            &.cancel {
+              border-color: #ffffff;
+              .px2px(font-size, 26);
+              font-weight: 400;
+              color: #949EB3;
+              .px2rem(line-height, 92);
+            }
+          }
+        }
+    }
+    &.type-empty {
+        .text-content {
+            .text-result {
+                color: #666666;
+            }
+        }
+    }
+    .img-verify {
+        .px2rem(width, 128);
+        .px2rem(height, 128);
+        animation:  scaleAnim 0.3s ease;
+    }
+    .text-content {
+        .px2rem(padding-top, 40);
+        .text-result {
+            color: #3B71E8;
+            .px2px(font-size, 39);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            span {
+                .px2px(font-size, 34);
+                .px2rem(margin-left, 5);
+            }
+        }
+        .text-tips {
+            color: #666666;
+            .px2px(font-size, 32);
+            .px2rem(padding-top, 28);
+            .px2rem(padding-left, 150);
+            .px2rem(padding-right, 150);
+            line-height: 1.5
+        }
+    }
+
+    .result-btn-cont {
+        .px2rem(padding-top, 187);
+        text-align: center;
+        .confirm-btn {
+            margin: 0 auto;
+            .px2rem(width, 414);
+            .px2rem(height, 92);
+            .px2rem(line-height, 92);
+            border: 2px solid #3B71E8;
+            .px2px(font-size, 32);
+            color: #3B71E8;
+            .px2rem(border-radius, 10);
+            font-weight: bold;
+        }
+        .cancel-btn {
+            color: #949EB3;
+            .px2px(font-size, 26);
+            .px2rem(padding-top, 30);
+        }
+    }
+}
+@keyframes scaleAnim {
+    0% {
+        transform: scale(0.5);
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
