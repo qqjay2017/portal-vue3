@@ -14,6 +14,8 @@ import { createHtmlPlugin } from "vite-plugin-html";
 
 const root: string = process.cwd();
 
+
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, root, "");
@@ -38,7 +40,15 @@ export default defineConfig(({ mode }) => {
       // vant 组件自动按需引入
 
       AutoImport({
-        dts: "src/typings/auto-imports.d.ts",
+        // include: [
+        //   /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+        //   /\.vue$/,
+        //   /\.vue\?vue/, // .vue
+        //   /\.md$/, // .md
+        // ],
+        // vueTemplate: true,
+      
+         dts: "src/typings/auto-imports.d.ts",
         resolvers: [VantResolver()],
       }),
       Components({

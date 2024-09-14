@@ -4,7 +4,6 @@
         <router-view v-slot="{ Component }">
             <component :is="Component" />
         </router-view>
-        <tabbar />
       </van-config-provider>
     </div>
   </template>
