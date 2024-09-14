@@ -1,12 +1,13 @@
 {
   "name": "portal-vue3",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "eslint:fix": "eslint --fix src"
   },
   "dependencies": {
     "@vueuse/core": "^11.0.3",
@@ -23,17 +24,20 @@
     "vue-router": "^4.4.5"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^3.6.0",
     "@types/codemirror": "^5.60.15",
     "@types/lodash": "^4.17.7",
     "@types/node": "^20.16.5",
     "@types/nprogress": "^0.2.3",
     "@types/path-browserify": "^1.0.3",
     "@types/qs": "^6.9.15",
+    "@unocss/eslint-plugin": "^0.62.3",
     "@unocss/preset-rem-to-px": "^0.62.3",
-    "@vant/auto-import-resolver": "^1.2.1",
+    "@vant/auto-import-resolver": "^1.1.0",
     "@vitejs/plugin-vue": "^5.1.2",
     "@vitejs/plugin-vue-jsx": "^4.0.1",
     "@vue/tsconfig": "^0.5.1",
+    "eslint": "^9.10.0",
     "less": "^4.2.0",
     "postcss": "^8.4.45",
     "typescript": "^5.5.3",

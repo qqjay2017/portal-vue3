@@ -1,27 +1,25 @@
-import { fileURLToPath, URL } from "node:url";
+import { fileURLToPath, URL } from 'node:url'
 
-import { defineConfig, loadEnv } from "vite";
-import vue from "@vitejs/plugin-vue";
-import UnoCSS from "unocss/vite";
-import AutoImport from 'unplugin-auto-import/vite';
-import Components from 'unplugin-vue-components/vite';
-import { VantResolver } from "unplugin-vue-components/resolvers";
-import vueJsx from "@vitejs/plugin-vue-jsx";
-import vueSetupExtend from "vite-plugin-vue-setup-extend";
-import viteCompression from "vite-plugin-compression";
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import UnoCSS from 'unocss/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import { VantResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/vite'
+import { defineConfig, loadEnv } from 'vite'
+import viteCompression from 'vite-plugin-compression'
+import { createHtmlPlugin } from 'vite-plugin-html'
 
-import { createHtmlPlugin } from "vite-plugin-html";
+import vueSetupExtend from 'vite-plugin-vue-setup-extend'
 
-const root: string = process.cwd();
-
-
+const root: string = process.cwd()
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  const env = loadEnv(mode, root, "");
+  const env = loadEnv(mode, root, '')
 
   return {
-    base: env.VITE_PUBLIC_PATH || "/",
+    base: env.VITE_PUBLIC_PATH || '/',
 
     server: {
       port: 8080,
@@ -30,30 +28,49 @@ export default defineConfig(({ mode }) => {
     // base: VITE_PUBLIC_PATH,
     resolve: {
       alias: {
-        "@": fileURLToPath(new URL("./src", import.meta.url)),
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
       },
     },
     plugins: [
       vue(),
       vueJsx(),
       UnoCSS(),
-      // vant 组件自动按需引入
-
+      // 自动导入Api
       AutoImport({
-        // include: [
-        //   /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
-        //   /\.vue$/,
-        //   /\.vue\?vue/, // .vue
-        //   /\.md$/, // .md
-        // ],
-        // vueTemplate: true,
-      
-         dts: "src/typings/auto-imports.d.ts",
+        include: [
+          /\.[tj]sx?$/,
+          /\.vue$/,
+          /\.vue\?vue/,
+        ],
+        dts: 'src/typings/auto-imports.d.ts',
         resolvers: [VantResolver()],
+        imports: [
+          'vue',
+          'vue-router',
+          'pinia',
+          '@vueuse/core',
+          {
+            vant: [
+              'showToast',
+              'showLoadingToast',
+              'showSuccessToast',
+              'showFailToast',
+              'closeToast',
+              'showNotify',
+              'showConfirmDialog'
+            ]
+          },
+        ],
+        eslintrc: { enabled: true, globalsPropValue: 'readonly' }
       }),
+        // vant 组件自动按需引入
       Components({
-        dts: "src/typings/components.d.ts",
+        dts: 'src/typings/components.d.ts',
         resolvers: [VantResolver()],
+        dirs: ['src/components'],
+        directoryAsNamespace: true,
+        importPathTransform: path => path.replace(/^.+\/src/g, '@')
+
       }),
 
       vueSetupExtend(),
@@ -62,7 +79,7 @@ export default defineConfig(({ mode }) => {
       createHtmlPlugin({
         inject: {
           data: {
-            ENABLE_ERUDA: env.VITE_ENABLE_ERUDA || "false",
+            ENABLE_ERUDA: env.VITE_ENABLE_ERUDA || 'false',
           },
         },
       }),
@@ -73,11 +90,11 @@ export default defineConfig(({ mode }) => {
     build: {
       rollupOptions: {
         output: {
-          chunkFileNames: "static/js/[name]-[hash].js",
-          entryFileNames: "static/js/[name]-[hash].js",
-          assetFileNames: "static/[ext]/[name]-[hash].[ext]",
+          chunkFileNames: 'static/js/[name]-[hash].js',
+          entryFileNames: 'static/js/[name]-[hash].js',
+          assetFileNames: 'static/[ext]/[name]-[hash].[ext]',
         },
       },
     },
-  };
-});
+  }
+})
