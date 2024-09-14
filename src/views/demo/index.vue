@@ -1,4 +1,5 @@
 <script setup lang="ts" name="Demo">
+
 import { reactive } from "vue";
 
 const contentList = reactive([
@@ -7,15 +8,17 @@ const contentList = reactive([
   "✔ ✨ Vant4 组件库",
  
 ]);
+
+const handleClick = () => {
+  console.log('click')
+  showToast('点击了')
+
+}
 </script>
 
 <template>
   <div class="demo-content px-[12px]">
-    <img
-      class="block w-[120px] mx-auto mb-[20px] pt-[30px]"
-      alt="Vue logo"
-
-    />
+    <van-button type="primary"  @click="handleClick">按钮</van-button> 
     <div class="pl-[12px] border-l-[3px] border-[color:#41b883]">
       <a
         class="flex items-center"
