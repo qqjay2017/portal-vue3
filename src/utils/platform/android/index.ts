@@ -1,4 +1,4 @@
-import type { WebViewJavascriptBridge } from '@/global'
+import type { WebViewJavascriptBridge } from '@/typings/bridge'
 
 export function setupWebViewJavascriptBridge(callback: (bridge: WebViewJavascriptBridge) => void): void {
   if (window.WebViewJavascriptBridge) { return callback(window.WebViewJavascriptBridge) }

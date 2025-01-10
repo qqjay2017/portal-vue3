@@ -16,7 +16,7 @@
     "vue": "^3.5.13"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.12.1",
+    "@antfu/eslint-config": "^3.13.0",
     "@types/node": "^22.8.7",
     "@vant/auto-import-resolver": "^1.2.1",
     "@vitejs/plugin-vue": "^5.2.1",

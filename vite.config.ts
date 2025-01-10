@@ -10,19 +10,26 @@ import { createHtmlPlugin } from 'vite-plugin-html'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [vue(), vueJsx(), AutoImport({
-    dts: 'src/typings/auto-imports.d.ts',
-    resolvers: [VantResolver()],
-  }), Components({
-    dts: 'src/typings/components.d.ts',
-    resolvers: [VantResolver()],
-  }), viteCompression(), createHtmlPlugin({
-    inject: {
-      data: {
+  plugins: [
+    vue(),
+    vueJsx(),
+    AutoImport({
+      dts: 'src/typings/auto-imports.d.ts',
+      resolvers: [VantResolver()],
+    }),
+    Components({
+      dts: 'src/typings/components.d.ts',
+      resolvers: [VantResolver()],
+    }),
+    viteCompression(),
+    createHtmlPlugin({
+      inject: {
+        data: {
 
+        },
       },
-    },
-  })],
+    }),
+  ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
