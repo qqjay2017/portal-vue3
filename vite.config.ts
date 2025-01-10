@@ -14,25 +14,17 @@ export default defineConfig({
     vue(),
     vueJsx(),
     AutoImport({
+      imports: ['vue'],
       dts: 'src/typings/auto-imports.d.ts',
       resolvers: [VantResolver()],
+      dirs: ['./src/utils/**'],
     }),
     Components({
       dts: 'src/typings/components.d.ts',
       resolvers: [VantResolver()],
     }),
     viteCompression(),
-    createHtmlPlugin({
-      inject: {
-        data: {
-
-        },
-      },
-    }),
+    createHtmlPlugin({ inject: { data: {} } }),
   ],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
-    },
-  },
+  resolve: { alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) } },
 })

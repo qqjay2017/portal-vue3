@@ -4,9 +4,9 @@ const setupWebViewJavascriptBridge: SetupWebViewJavascriptBridge = (callback) =>
   return callback()
 }
 
-const dllPlatformApi: PlatformApi = {
+const macPlatformApi: PlatformApi = {
   setupWebViewJavascriptBridge,
 
 }
 
-export default dllPlatformApi
+export default macPlatformApi

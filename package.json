@@ -11,9 +11,15 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "abort-controller": "^3.0.0",
+    "axios": "^1.7.9",
+    "deep-pick-omit": "^1.2.1",
+    "destr": "^2.0.3",
     "normalize.css": "^8.0.1",
+    "pinia": "^2.3.0",
     "vant": "^4.9.15",
-    "vue": "^3.5.13"
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.13.0",

@@ -16,10 +16,8 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "src/**/*.vue",
-    "auto-imports.d.ts",
-    "components.d.ts",
-    "src/typings/*.ts"
+    "src/**/*.vue"
+
   ],
   "exclude": ["dist", "**/*.js", "node_modules"]
 }

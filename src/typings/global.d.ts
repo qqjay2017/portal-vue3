@@ -1,5 +1,3 @@
-import type { WebViewJavascriptBridge } from './bridge'
-
 export {}
 
 declare global {
