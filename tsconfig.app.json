@@ -2,17 +2,24 @@
   "extends": "@vue/tsconfig/tsconfig.dom.json",
   "compilerOptions": {
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     /* Linting */
-    "strict": true,
+    "strict": false,
     "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-
     "noUncheckedSideEffectImports": true
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "src/**/*.vue"
-  ]
+    "src/**/*.vue",
+    "auto-imports.d.ts",
+    "components.d.ts",
+    "src/typings/*.ts"
+  ],
+  "exclude": ["dist", "**/*.js", "node_modules"]
 }
