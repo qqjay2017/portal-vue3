@@ -11,8 +11,9 @@
     "allowImportingTsExtensions": true,
 
     /* Linting */
-    "strict": true,
+    "strict": false,
     "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noEmit": true,

@@ -1,9 +1,11 @@
 import { Dialog, ImagePreview, Notify, Popup, Toast } from 'vant'
-import { createApp } from 'vue'
 
+import { createApp } from 'vue'
 import App from './App.vue'
+
 import router from './router'
 import store from './store'
+import 'virtual:uno.css'
 import 'normalize.css/normalize.css'
 import '@/styles/index.less'
 // vant 组件样式

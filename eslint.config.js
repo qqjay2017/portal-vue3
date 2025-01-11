@@ -24,7 +24,12 @@ export default antfu({
 
   },
   typescript: true,
-  rules: {'no-console': 'warn', 'ts/no-empty-object-type': 'off', 
-},
+  rules: {
+    'no-console': 'off',
+    'ts/no-empty-object-type': 'off',
+    'prefer-promise-reject-errors': 'off',
+    'unused-imports/no-unused-vars': 'warn',
+    'ts/no-unsafe-function-type':'off'
+  },
 
 })

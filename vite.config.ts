@@ -11,6 +11,7 @@ import { createHtmlPlugin } from 'vite-plugin-html'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // server: { host: '192.168.0.101' },
   plugins: [
     vue(),
     vueJsx(),
@@ -21,7 +22,7 @@ export default defineConfig({
       ],
       dts: 'src/typings/auto-imports.d.ts',
       resolvers: [VantResolver()],
-      dirs: ['./src/utils/**'],
+      dirs: ['./src/utils/**', './src/hooks/**'],
       vueTemplate: true,
     }),
     Components({
