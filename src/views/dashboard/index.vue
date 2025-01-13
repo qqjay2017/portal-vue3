@@ -1,3 +1,5 @@
 <template>
-  <div>123</div>
+  <DashboardLayout>
+    <DashboardMenus />
+  </DashboardLayout>
 </template>

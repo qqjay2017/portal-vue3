@@ -9,8 +9,12 @@ import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 import viteCompression from 'vite-plugin-compression'
 import { createHtmlPlugin } from 'vite-plugin-html'
+
+// eslint-disable-next-line node/prefer-global/process
+const isDev = process.env.NODE_ENV === 'development'
 // https://vite.dev/config/
 export default defineConfig({
+  base: isDev ? '/' : '/drug-identity',
   // server: { host: '192.168.0.101' },
   plugins: [
     vue(),
@@ -23,8 +27,10 @@ export default defineConfig({
       dts: 'src/typings/auto-imports.d.ts',
       resolvers: [VantResolver()],
       dirs: [
-'./src/utils/**','./src/hooks/**'
-],
+        './src/utils/**',
+        './src/hooks/**',
+        './src/hooks/page-data',
+      ],
       vueTemplate: true,
     }),
     Components({
@@ -65,6 +71,18 @@ export default defineConfig({
           minPixelValue: 3, // 设置要替换的最小像素值(3px会被转rem)。 默认 0
         }),
       ],
+    },
+  },
+  server: {
+    proxy: {
+      '/tmnl': {
+        target: 'https://dev.ylzpay.com/api/yyds',
+        changeOrigin: true,
+      },
+      '/mobile': {
+        target: 'https://dev.ylzpay.com/api/msis',
+        changeOrigin: true, // 通用测试环境
+      },
     },
   },
 })

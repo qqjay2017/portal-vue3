@@ -8,8 +8,13 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     BounceSpin: typeof import('./../components/BounceSpin/index.vue')['default']
+    ClickScan: typeof import('./../components/ClickScan/index.vue')['default']
+    DashboardLayout: typeof import('./../components/DashboardLayout/index.vue')['default']
+    DashboardMenus: typeof import('./../components/DashboardMenus/index.vue')['default']
+    PackageLayout: typeof import('./../components/PackageLayout/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    ScanCodeInput: typeof import('./../components/ScanCodeInput/index.vue')['default']
     VanConfigProvider: typeof import('vant/es')['ConfigProvider']
   }
 }

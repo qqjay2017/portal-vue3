@@ -9,6 +9,7 @@ declare global {
   const AbortController: typeof import('../utils/abortController')['AbortController']
   const EffectScope: typeof import('vue')['EffectScope']
   const android: typeof import('../utils/platform/android/index')['default']
+  const api: typeof import('../utils/config/api')['default']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']
   const customRef: typeof import('vue')['customRef']
@@ -22,8 +23,10 @@ declare global {
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
   const getCurrentScope: typeof import('vue')['getCurrentScope']
   const h: typeof import('vue')['h']
+  const https: typeof import('../utils/https')['default']
   const inject: typeof import('vue')['inject']
   const isAndroid: typeof import('../utils/env')['isAndroid']
+  const isDev: typeof import('../utils/env')['isDev']
   const isDll: typeof import('../utils/env')['isDll']
   const isMac: typeof import('../utils/env')['isMac']
   const isProxy: typeof import('vue')['isProxy']
@@ -72,9 +75,13 @@ declare global {
   const useId: typeof import('vue')['useId']
   const useLink: typeof import('vue-router')['useLink']
   const useModel: typeof import('vue')['useModel']
+  const usePackageDetailData: typeof import('../hooks/page-data/usePackageDetailData')['usePackageDetailData']
   const useRoute: typeof import('vue-router')['useRoute']
   const useRouteMeta: typeof import('../hooks/useRouteMeta')['useRouteMeta']
+  const useRouteParams: typeof import('../hooks/useRouteParams')['useRouteParams']
+  const useRoutePush: typeof import('../hooks/useRoutePush')['useRoutePush']
   const useRouter: typeof import('vue-router')['useRouter']
+  const useScanQrCode: typeof import('../hooks/useScanQrCode')['useScanQrCode']
   const useSlots: typeof import('vue')['useSlots']
   const useTemplateRef: typeof import('vue')['useTemplateRef']
   const watch: typeof import('vue')['watch']
@@ -97,6 +104,7 @@ declare module 'vue' {
     readonly AbortController: UnwrapRef<typeof import('../utils/abortController')['AbortController']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
     readonly android: UnwrapRef<typeof import('../utils/platform/android/index')['default']>
+    readonly api: UnwrapRef<typeof import('../utils/config/api')['default']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
     readonly createApp: UnwrapRef<typeof import('vue')['createApp']>
     readonly customRef: UnwrapRef<typeof import('vue')['customRef']>
@@ -109,8 +117,10 @@ declare module 'vue' {
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
+    readonly https: UnwrapRef<typeof import('../utils/https')['default']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly isAndroid: UnwrapRef<typeof import('../utils/env')['isAndroid']>
+    readonly isDev: UnwrapRef<typeof import('../utils/env')['isDev']>
     readonly isDll: UnwrapRef<typeof import('../utils/env')['isDll']>
     readonly isMac: UnwrapRef<typeof import('../utils/env')['isMac']>
     readonly isProxy: UnwrapRef<typeof import('vue')['isProxy']>
@@ -157,9 +167,13 @@ declare module 'vue' {
     readonly useId: UnwrapRef<typeof import('vue')['useId']>
     readonly useLink: UnwrapRef<typeof import('vue-router')['useLink']>
     readonly useModel: UnwrapRef<typeof import('vue')['useModel']>
+    readonly usePackageDetailData: UnwrapRef<typeof import('../hooks/page-data/usePackageDetailData')['usePackageDetailData']>
     readonly useRoute: UnwrapRef<typeof import('vue-router')['useRoute']>
     readonly useRouteMeta: UnwrapRef<typeof import('../hooks/useRouteMeta')['useRouteMeta']>
+    readonly useRouteParams: UnwrapRef<typeof import('../hooks/useRouteParams')['useRouteParams']>
+    readonly useRoutePush: UnwrapRef<typeof import('../hooks/useRoutePush')['useRoutePush']>
     readonly useRouter: UnwrapRef<typeof import('vue-router')['useRouter']>
+    readonly useScanQrCode: UnwrapRef<typeof import('../hooks/useScanQrCode')['useScanQrCode']>
     readonly useSlots: UnwrapRef<typeof import('vue')['useSlots']>
     readonly useTemplateRef: UnwrapRef<typeof import('vue')['useTemplateRef']>
     readonly watch: UnwrapRef<typeof import('vue')['watch']>

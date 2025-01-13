@@ -12,17 +12,21 @@ const backPath = computed(() => {
 })
 
 function goBack() {
-  router.push(backPath.value)
+  if (backPath.value) {
+    router.push(backPath.value)
+  }
+  else {
+    router.back()
+  }
 }
 </script>
 
 <template>
   <div class="header" :class="[notHeaderFixed && 'notHeaderFixed']">
     <Icon
-      v-if="backPath"
       name="arrow-left"
       :color="notHeaderFixed ? '#fff' : '#000'"
-      style="font-size: 28px"
+      style="font-size: 22px"
       @click="goBack"
     />
     <div v-if="!notHeaderFixed" class="title">

@@ -45,17 +45,20 @@ const wrapperStyle = computed(() => {
   overflow: hidden;
 
   position: relative;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   .hd {
     flex: none;
   }
   .main {
+    background-color: #f5f5f5;
     flex: auto;
     min-height: 0;
     height: 0;
     overflow-y: scroll;
+    overflow-x: hidden;
   }
   .fd {
     flex: none;
