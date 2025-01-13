@@ -1,14 +1,13 @@
 <script lang="ts" setup name="AppMain">
-const route = useRoute()
-const key = computed(() => {
-  return route.fullPath
-})
+
 </script>
 
 <template>
-  <transition name="fade-transform" mode="out-in">
-    <router-view :key="key" />
-  </transition>
+  <router-view v-slot="{ Component }">
+    <transition>
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 
 <style lang="less" scoped>

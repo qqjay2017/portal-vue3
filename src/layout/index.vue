@@ -15,10 +15,13 @@ const classObj = computed(() => {
     notHeaderFixed,
   }
 })
+const wrapperStyle = computed(() => {
+  return { height: `${window.screen.availHeight}px` }
+})
 </script>
 
 <template>
-  <div class="app-wrapper">
+  <div class="app-wrapper" :style="wrapperStyle">
     <div
       v-if="!meta.hideHeader"
       class="hd"
@@ -39,58 +42,23 @@ const classObj = computed(() => {
 .app-wrapper {
   --header-height: 88px;
   --footer-height: 166px;
+  overflow: hidden;
 
   position: relative;
   width: 100%;
-
+  display: flex;
+  flex-direction: column;
   .hd {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    height: var(--header-height);
-    background-color: #fff;
-
-    z-index: 1000;
-    &.notHeaderFixed {
-      position: absolute;
-      top: 0;
-      z-index: 99;
-      background-color: transparent;
-    }
+    flex: none;
   }
   .main {
-    min-height: 100vh;
-    padding-top: var(--header-height);
-    padding-bottom: var(--footer-height);
-    > * {
-      min-height: calc(100vh - var(--header-height) - var(--footer-height));
-    }
-
-    &.hideHeader {
-      padding-top: 0;
-      > * {
-        min-height: calc(100vh - var(--footer-height));
-      }
-    }
-    &.hideFooter {
-      padding-bottom: 0;
-      > * {
-        min-height: calc(100vh - var(--header-height));
-      }
-    }
-    &.notHeaderFixed {
-      padding-top: 0;
-    }
+    flex: auto;
+    min-height: 0;
+    height: 0;
+    overflow-y: scroll;
   }
-
   .fd {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    background-color: #fff;
-    height: var(--footer-height);
-
-    z-index: 1000;
+    flex: none;
   }
 }
 </style>

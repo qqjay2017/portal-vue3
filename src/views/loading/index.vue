@@ -7,10 +7,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div class="loading-page">
     <BounceSpin
       tip="正在进入"
       style="margin-top:200px;"
     />
   </div>
 </template>
+
+<style lang="less" scoped>
+.loading-page {
+  padding-top: 200px;
+}
+</style>
