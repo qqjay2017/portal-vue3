@@ -16,6 +16,7 @@ declare global {
   const defineComponent: typeof import('vue')['defineComponent']
   const dll: typeof import('../utils/platform/dll/index')['default']
   const effectScope: typeof import('vue')['effectScope']
+  const flexible: typeof import('../utils/flexible')['flexible']
   const generateWebviewCallHandler: typeof import('../utils/platform/android/index')['generateWebviewCallHandler']
   const generateWebviewCallbackMethod: typeof import('../utils/platform/android/index')['generateWebviewCallbackMethod']
   const getCurrentInstance: typeof import('vue')['getCurrentInstance']
@@ -103,6 +104,7 @@ declare module 'vue' {
     readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
     readonly dll: UnwrapRef<typeof import('../utils/platform/dll/index')['default']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
+    readonly flexible: UnwrapRef<typeof import('../utils/flexible')['flexible']>
     readonly generateWebviewCallHandler: UnwrapRef<typeof import('../utils/platform/android/index')['generateWebviewCallHandler']>
     readonly getCurrentInstance: UnwrapRef<typeof import('vue')['getCurrentInstance']>
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>

@@ -5,6 +5,7 @@ import App from './App.vue'
 
 import router from './router'
 import store from './store'
+import { flexible } from './utils/flexible'
 import 'virtual:uno.css'
 import 'normalize.css/normalize.css'
 import '@/styles/index.less'
@@ -16,6 +17,7 @@ import 'vant/lib/image-preview/style'
 import 'vant/lib/popup/style'
 
 function initApplication() {
+  flexible()
   const app = createApp(App)
   app.use(store)
   app.use(Toast)
